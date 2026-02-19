@@ -44,6 +44,7 @@ li{
 }
 
 .dq-window-3 {
+  position: relative;
   border-color: rgb(255, 255, 255);
   padding: 0.05rem;
   line-height: 2;
@@ -90,4 +91,18 @@ input {
 .button:hover {
   background: #ffd966;
   color: #000;
+}
+
+.picture{
+  position: absolute; 
+  top: 14.5%;
+  right: 7%;
+  width: 8%;
+  height: 8%;
+  animation: fluffy 3s infinite;
+}
+
+@keyframes fluffy {
+  20%, 90% {transform: translateY(0);}
+  50% {transform: translateY(-2.5px);}
 }

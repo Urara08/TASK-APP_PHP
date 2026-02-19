@@ -14,7 +14,7 @@
             $content = file_get_contents('data.json');
             $Task_line = json_decode($content, true);
             ?>
-            <p class="title">👾現在のタスク状況👾</p>
+            <p class="title">現在のタスク状況</p>
             <ul>
               <?php //タスクがなければ
               if (empty($Task_line)){
@@ -33,6 +33,7 @@
                       <input type="text" name="delete_task" id="label-delete_task" placeholder="削除するタスク番号">
                       <input type="submit" value="削除" class="button">
                     </form>
+                    <img src="img/pic.png" class="picture" alt="キャラクター画像">
                   </div>
                 </div>
               </main>
