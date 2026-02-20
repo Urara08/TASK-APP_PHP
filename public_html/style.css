@@ -114,8 +114,8 @@ input {
 }
 
 .button_login{
- margin:0 auto;
- padding: 8px 33.5%;
+ margin: 10px 0 auto;
+ padding: 8px 33%;
 }
 
 .picture{
@@ -142,4 +142,8 @@ margin-bottom: 7.5px;
 
 .mg-right{
 margin-right: 0;
+}
+
+.pd-top{
+  padding-top: 10px;
 }
