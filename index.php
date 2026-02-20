@@ -6,6 +6,16 @@
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
+<!--セッション開始-->
+<!--ログインをしていなければログインページへ-->
+<?php
+session_start();
+if (!isset($_SESSION['username'])) {
+    header('Location: login.php');
+    exit;
+}
+?>
+<html>
     <main  class="container">
       <div class="dq-window-2">
         <div class="dq-window-3">
@@ -35,7 +45,10 @@
                     </form>
                     <img src="img/pic.png" class="picture" alt="キャラクター画像">
                   </div>
+                  <a href="logout.php">ログアウト</a>
                 </div>
               </main>
+              <footer>
+              </footer>
             </body>
             </html>
