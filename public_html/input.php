@@ -6,6 +6,12 @@ $Task_line = json_decode($content, true);
 //新規タスクを取得//配列に格納
 $Task_line[] = $_POST['input_task'];
 
+// 空入力の場合はexit
+if (empty($_POST['input_task'])) {
+    header("Location: index.php");
+    exit;
+}
+
 // ナンバリングを詰める
 $Task_line = array_values($Task_line);
 
