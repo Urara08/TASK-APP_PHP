@@ -1,4 +1,5 @@
-<?php
+<?php require_once 'init.php';
+
 // data.jsonを読み込み
 $content = file_get_contents('data.json');
 $Task_line = json_decode($content, true);

@@ -1,7 +1,10 @@
-<?php
+<?php require_once 'init.php';
 //data.jsonを読み込み
 $content = file_get_contents('data.json');
 $Task_line = json_decode($content, true);
+
+// nullや未定義の場合は空配列を格納
+$Task_line = $Task_line ?? []; 
 
 //新規タスクを取得//配列に格納
 $Task_line[] = $_POST['input_task'];

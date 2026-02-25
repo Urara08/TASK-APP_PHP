@@ -1,3 +1,6 @@
+<!--セッション開始-->
+<!--ログインをしていなければログインページへ-->
+<?php require_once 'init.php'; ?>
 <!DOCTYPE html>
 <html lang="ja">
   <head>
@@ -6,17 +9,6 @@
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
-<!--セッション開始-->
-<!--ログインをしていなければログインページへ-->
-<?php
-session_start();
-if (!isset($_SESSION['username'])) {
-    header('Location: login.php');
-    exit;
-}
-
-?>
-<html>
     <main  class="container">
       <div class="dq-window-2">
         <div class="dq-window-3">
@@ -26,6 +18,7 @@ if (!isset($_SESSION['username'])) {
             $Task_line = json_decode($content, true);
             ?>
             <p class="title">現在のタスク状況</p>
+            <img src="img/pic.png" class="picture" alt="キャラクター画像">
             <ul>
               <?php //タスクがなければ
               if (empty($Task_line)){
@@ -44,7 +37,7 @@ if (!isset($_SESSION['username'])) {
                       <input type="text" name="delete_task" id="label-delete_task" placeholder="削除するタスク番号">
                       <input type="submit" value="削除" class="button">
                     </form>
-                    <img src="img/pic.png" class="picture" alt="キャラクター画像">
+
                   </div>
                   <a href="logout.php">ログアウト</a>
                 </div>
